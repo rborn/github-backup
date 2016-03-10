@@ -9,9 +9,7 @@ function main(argv) {
 		console.error("Usage: github-backup username path");
 		process.exit(-1);
 	}
-	backup.publicUserRepos(args[0], args[1]).catch(function(err) {
-		console.error("Unhandled error:", err);
-	}).done();
+	backup.publicUserRepos(args[0], args[1]);
 }
 
 main(process.argv);
